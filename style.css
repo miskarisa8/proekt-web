@@ -1,0 +1,315 @@
+/* Общие стили */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #423d5f;
+    line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Секции */
+section {
+    padding: 80px 0;
+}
+
+/* Шапка */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(78, 14, 107, 0.329);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3b199b69;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: hsl(261, 58%, 28%);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c94fb9;
+}
+
+/* Бургер-меню */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f0f8ff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.hero-image {
+    width: 40%;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(89, 98, 148, 0.664);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #906ece;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffe7f5;
+}
+
+/* About Section */
+.about {
+    background-color: #db92cb4b;
+}
+
+.about p {
+    font-size: 1.1em;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background-color: #f9f9f9;
+}
+
+.portfolio-slider {
+    display: flex;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 80%; /* Установите ширину по вашему усмотрению */
+    margin: 0 auto; /* Центрирование слайда */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 20, 241, 0.267);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #fff;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list li {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: #485ea8be;
+    color: #fff;
+    cursor: pointer;
+}
+
+.skills-list li i {
+    margin-right: 5px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f0f8ff;
+}
+
+.contact .container {
+    text-align: center;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.contact-info li i {
+    margin-right: 5px;
+}
+
+.contact a {
+    color: #7d4acf;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #d8244b;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        width: 80%;
+    }
+
+    .skills-list li {
+        margin: 5px;
+    }
+
+    .project {
+        width: 90%; /* Установите ширину по вашему усмотрению для мобильных устройств */
+    }
+}
